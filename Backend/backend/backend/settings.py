@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-w%x9#%onh+$z+72_9v%!ov^tzz72szt75f6w5pz$^&j01^(b-p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".vercel.app"]
 
 
 # Application definition
@@ -57,11 +57,17 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://127.0.0.1:8001',
+    'http://127.0.0.1:8000',
+     "https://auth-testing-for-management.vercel.app",
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Allow frontend on this port
+      # Allow frontend on this port
+     "https://auth-testing-for-management.vercel.app",  # Vercel app
+    
 ]
 
 
